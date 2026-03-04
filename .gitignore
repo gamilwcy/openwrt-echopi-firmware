@@ -1,0 +1,22 @@
+# ISO files (too large for Git, use GitHub Releases)
+*.iso
+
+# Build artifacts
+build/
+dist/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp

@@ -1,0 +1,46 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  build:
+    name: Build and Upload Release
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Get version from tag
+        id: get_version
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Find ISO files
+        id: find_isos
+        run: |
+          LEGACY_ISO=$(find . -name "Echo.Pi-Legacy-*.iso" -type f | head -1)
+          UEFI_ISO=$(find . -name "Echo.Pi-UEFI-*.iso" -type f | head -1)
+          echo "legacy_iso=${LEGACY_ISO}" >> $GITHUB_OUTPUT
+          echo "uefi_iso=${UEFI_ISO}" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Echo.Pi ${{ steps.get_version.outputs.VERSION }}
+          body_path: RELEASE_NOTES.md
+          files: |
+            ${{ steps.find_isos.outputs.legacy_iso }}
+            ${{ steps.find_isos.outputs.uefi_iso }}
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
