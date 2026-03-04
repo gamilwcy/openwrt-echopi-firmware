@@ -16,6 +16,12 @@
 ![Step 1](install-step-1.png)
 
 Download the ISO file and write it to a USB drive using:
+
+- **Ventoy** (Recommended):
+  - Download: https://www.ventoy.net/en/download.html
+  - Guide: https://www.ventoy.net/en/doc_start.html
+  - Install Ventoy once, then simply copy ISO files to the USB drive
+
 - **Windows**: Rufus or balenaEtcher
 - **Mac/Linux**: balenaEtcher or `dd` command
 
@@ -41,7 +47,7 @@ After installation finishes, remove the USB drive and reboot. The device will st
 
 ## Next Steps
 
-1. Access Web UI: `http://192.168.1.1` (default)
+1. Access Web UI: `http://192.168.88.1` (default)
 2. Login with default credentials
 3. Configure WAN/LAN settings
 4. Set up additional features (VPN, VLAN, etc.)
@@ -83,6 +89,12 @@ After installation finishes, remove the USB drive and reboot. The device will st
 ![步骤 1](install-step-1.png)
 
 下载 ISO 文件并写入 U 盘：
+
+- **Ventoy**（推荐）:
+  - 下载：https://www.ventoy.net/en/download.html
+  - 教程：https://www.ventoy.net/en/doc_start.html
+  - 只需安装一次 Ventoy，之后直接复制 ISO 文件到 U 盘即可
+
 - **Windows**: 使用 Rufus 或 balenaEtcher
 - **Mac/Linux**: 使用 balenaEtcher 或 `dd` 命令
 
@@ -108,7 +120,7 @@ After installation finishes, remove the USB drive and reboot. The device will st
 
 ## 后续步骤
 
-1. 访问 Web 管理界面：`http://192.168.1.1`（默认）
+1. 访问 Web 管理界面：`http://192.168.88.1`（默认）
 2. 使用默认凭据登录
 3. 配置 WAN/LAN 设置
 4. 设置其他功能（VPN、VLAN 等）
