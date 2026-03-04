@@ -260,4 +260,4 @@ Contact us to discuss your customization needs.
 
 Scan the QR code below to contact us on Telegram:
 
-![Telegram Contact QR Code](telegram-contact.jpg)
+<img src="telegram-contact.jpg" width="200" height="200" />
