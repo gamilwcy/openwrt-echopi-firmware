@@ -244,3 +244,20 @@ For issues or suggestions, please provide feedback through:
 - Submit problem feedback
 - Contact technical support
 - Check help documentation
+
+### Custom Firmware Services
+
+We provide professional custom firmware development services tailored to your specific requirements. Our team can accommodate any form of firmware customization, including but not limited to:
+- Custom feature development and integration
+- Protocol support and optimization
+- Hardware adaptation and driver development
+- UI/UX customization and branding
+- Performance optimization and security enhancements
+
+Contact us to discuss your customization needs.
+
+### Telegram Contact
+
+Scan the QR code below to contact us on Telegram:
+
+![Telegram Contact QR Code](telegram-contact.jpg)
