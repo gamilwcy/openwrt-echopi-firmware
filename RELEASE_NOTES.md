@@ -1,50 +1,121 @@
-## Echo.Pi 网关固件
+# Echo.Pi Gateway Firmware v1.0.0
 
-### 版本信息
-- **产品名称**: Echo.Pi
-- **固件版本**: v1.0.0
+## Downloads
 
-###  download Links
+| File | Description |
+|------|-------------|
+| `Echo.Pi-Legacy-*.iso` | Legacy BIOS mode (older devices) |
+| `Echo.Pi-UEFI-*.iso` | UEFI mode (modern devices) |
 
-#### Legacy BIOS 启动模式
-- `Echo.Pi-Legacy-*.iso` - 适用于传统 BIOS 启动的老式设备
+---
 
-#### UEFI 启动模式
-- `Echo.Pi-UEFI-*.iso` - 适用于 UEFI 启动的现代设备
+## Installation Guide
 
-### 安装说明
+### Step 1: Create Bootable USB
 
-1. **下载镜像**
-   - 根据设备启动模式选择合适的 ISO 文件
-   - 校验文件完整性（建议添加 SHA256）
+![Step 1](install-step-1.png)
 
-2. **制作启动盘**
-   - 使用 Rufus (Windows) 或 Etcher (跨平台) 写入 U 盘
-   - 或使用 `dd` 命令 (Linux/Mac):
-     ```bash
-     sudo dd if=Echo.Pi-UEFI-*.iso of=/dev/sdX bs=4M status=progress
-     ```
+Download the ISO file and write it to a USB drive using:
+- **Windows**: Rufus or balenaEtcher
+- **Mac/Linux**: balenaEtcher or `dd` command
 
-3. **安装固件**
-   - 插入 U 盘到目标设备
-   - 从 U 盘启动
-   - 按屏幕提示完成安装
+### Step 2: Boot from USB
 
-### 更新日志
+![Step 2](install-step-2.png)
 
-#### 新增功能
-- 企业级 Web 管理界面
-- 多语言支持（简体中文、繁体中文、English）
-- 多 WAN 接入与负载均衡
-- VPN 客户端（支持 6 种协议）
-- 智能流量分流与限速
-- 实时网络监控
+Insert the USB drive into your device and boot from it. Change boot order in BIOS/UEFI if needed.
 
-#### 已知问题
-- 无
+### Step 3: Install Firmware
 
-### 技术支持
+![Step 3](install-step-3.png)
 
-如有问题或建议，请：
-- 提交 Issue: https://github.com/gamilwcy/openwrt-echopi-firmware/issues
-- 查看文档：README.md / README_zh.md
+Follow the on-screen prompts to complete installation. Choose your target disk and confirm.
+
+### Installation Complete
+
+![Installed & Rebooted](installed-and-reboot-console.png)
+
+After installation finishes, remove the USB drive and reboot. The device will start with Echo.Pi firmware.
+
+---
+
+## Next Steps
+
+1. Access Web UI: `http://192.168.1.1` (default)
+2. Login with default credentials
+3. Configure WAN/LAN settings
+4. Set up additional features (VPN, VLAN, etc.)
+
+---
+
+## Support
+
+- **Documentation**: [README.md](README.md) | [简体中文](README_zh.md)
+- **Issues**: https://github.com/gamilwcy/openwrt-echopi-firmware/issues
+
+---
+
+<br>
+
+---
+
+## 中文版本
+
+[查看中文发布说明](#echo-pi-网关固件-v100)
+
+---
+
+# Echo.Pi 网关固件 v1.0.0
+
+## 下载链接
+
+| 文件 | 说明 |
+|------|------|
+| `Echo.Pi-Legacy-*.iso` | Legacy BIOS 模式（老旧设备） |
+| `Echo.Pi-UEFI-*.iso` | UEFI 模式（现代设备） |
+
+---
+
+## 安装指南
+
+### 步骤 1：制作启动盘
+
+![步骤 1](install-step-1.png)
+
+下载 ISO 文件并写入 U 盘：
+- **Windows**: 使用 Rufus 或 balenaEtcher
+- **Mac/Linux**: 使用 balenaEtcher 或 `dd` 命令
+
+### 步骤 2：从 U 盘启动
+
+![步骤 2](install-step-2.png)
+
+将 U 盘插入设备并从 U 盘启动。如需要，在 BIOS/UEFI 中更改启动顺序。
+
+### 步骤 3：安装固件
+
+![步骤 3](install-step-3.png)
+
+按照屏幕提示完成安装。选择目标磁盘并确认。
+
+### 安装完成
+
+![安装完成并重启](installed-and-reboot-console.png)
+
+安装完成后，拔出 U 盘并重启。设备将以 Echo.Pi 固件启动。
+
+---
+
+## 后续步骤
+
+1. 访问 Web 管理界面：`http://192.168.1.1`（默认）
+2. 使用默认凭据登录
+3. 配置 WAN/LAN 设置
+4. 设置其他功能（VPN、VLAN 等）
+
+---
+
+## 技术支持
+
+- **文档**: [README.md](README.md) | [简体中文](README_zh.md)
+- **问题反馈**: https://github.com/gamilwcy/openwrt-echopi-firmware/issues
