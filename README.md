@@ -258,6 +258,8 @@ Contact us to discuss your customization needs.
 
 ### Telegram Contact
 
+Telegram: **@Jackchuanzhang01**
+
 Scan the QR code below to contact us on Telegram:
 
 <img src="telegram-contact.jpg" width="442" height="579" />
